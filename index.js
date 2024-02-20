@@ -2,12 +2,12 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import cookieParser from "cookie-parser";
-import connectDB from "../config/dbConnection.js";
-import AuthRouter from "../routes/auth.route.js";
-import DepartmentRouter from "../routes/department.route.js";
-import UserRouter from "../routes/user.route.js";
-import AttendanceRouter from "../routes/attendance.route.js";
-import { errorHandler } from "../middlewares/errorHandler.js";
+import connectDB from "./config/dbConnection.js";
+import AuthRouter from "./routes/auth.route.js";
+import DepartmentRouter from "./routes/department.route.js";
+import UserRouter from "./routes/user.route.js";
+import AttendanceRouter from "./routes/attendance.route.js";
+import { errorHandler } from "./middlewares/errorHandler.js";
 
 dotenv.config();
 
@@ -28,3 +28,5 @@ connectDB().then(() => {
     console.log("server running on port " + port);
   });
 });
+
+export default app;
