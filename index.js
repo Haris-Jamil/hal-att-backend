@@ -16,10 +16,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "https://hal-att-frontend-4hg4tiqwe-haris-jamils-projects.vercel.app/",
-    ],
+    origin: ["http://localhost:5173", "https://hal-att-frontend.vercel.app"],
     credentials: true,
   })
 );
