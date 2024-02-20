@@ -2,11 +2,11 @@
   "name": "attendance-server",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "install-server": "npm install",
-    "start-server": "node server.js",
+    "start-server": "node api/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
