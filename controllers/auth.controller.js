@@ -14,7 +14,11 @@ export const login = asyncHandler(async (req, res) => {
     );
 
     res
-      .cookie("accessToken", jwtToken, { httpOnly: true, sameSite: "none" })
+      .cookie("accessToken", jwtToken, {
+        httpOnly: true,
+        sameSite: "none",
+        secure: true,
+      })
       .status(200)
       .send({
         success: true,
