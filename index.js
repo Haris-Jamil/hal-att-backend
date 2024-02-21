@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import cookieParser from "cookie-parser";
+import helmet from "helmet";
 import connectDB from "./config/dbConnection.js";
 import AuthRouter from "./routes/auth.route.js";
 import DepartmentRouter from "./routes/department.route.js";
@@ -22,6 +23,7 @@ app.use(
 );
 app.use(express.json());
 app.use(cookieParser());
+app.use(helmet());
 app.use("/api/auth", AuthRouter);
 app.use("/api/department", DepartmentRouter);
 app.use("/api/user", UserRouter);
