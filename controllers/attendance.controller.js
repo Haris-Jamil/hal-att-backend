@@ -42,6 +42,6 @@ export const getMonthData = asyncHandler(async (req, res) => {
     userId: req.params.userId,
     month: req.params.month,
     year: req.params.year,
-  });
+  }).sort({ name: 1 });
   res.status(200).send({ success: true, data });
 });
